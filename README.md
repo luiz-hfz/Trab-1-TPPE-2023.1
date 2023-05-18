@@ -4,7 +4,7 @@ Repositório destinado a realização do trabalho de Técnicas de Programação 
 
 ## Participantes
 
-| Matrícula | Nome |
+| Nome | Matrícula |
 |---|---|
 | Arthur de Melo Garcia | 19/0024950 |
 | Artur de Sousa Vieira | 19/0010606 |
