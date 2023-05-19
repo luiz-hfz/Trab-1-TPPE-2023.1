@@ -16,13 +16,20 @@ public class CompletenessTest {
 		analyser = new FieldsCompletenessAnalyser();
 	}
 	
-
 	@Test
-	public void testFieldsCompleteness() {
+	public void testTwoCompleteFields() {
 		analyser.createField("Nome", "João");
 		analyser.createField("Idade", "21");
 		
 		assertTrue(analyser.analyse());
+	}
+	
+	@Test
+	public void testOneEmptyField() {
+		analyser.createField("Nome", "João");
+		analyser.createField("Idade", "");
+		
+		assertFalse(analyser.analyse());
 	}
 
 }
