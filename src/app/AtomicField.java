@@ -9,6 +9,6 @@ public class AtomicField extends Field {
 
     @Override
     public boolean isComplete() {
-        return true;  // Falsificação: sempre retorna true
+        return !value.isEmpty();
     }
 }

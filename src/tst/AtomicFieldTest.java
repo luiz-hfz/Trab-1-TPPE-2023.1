@@ -13,5 +13,11 @@ public class AtomicFieldTest {
         Field field = new AtomicField("CPF", "12345678910");
         assertTrue(field.isComplete());
     }
+
+    @Test
+    public void emptyAtomicFieldIsNotComplete() {
+        Field field = new AtomicField("CPF", "");
+        assertFalse(field.isComplete());
+    }
 }
 
