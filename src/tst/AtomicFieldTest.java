@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import app.AtomicField;
-import app.CompositeField;
-import app.Field;
+import app.orinclusivo.AtomicField;
+import app.orinclusivo.CompositeField;
+import app.orinclusivo.Field;
 
 public class AtomicFieldTest {
     @Test
