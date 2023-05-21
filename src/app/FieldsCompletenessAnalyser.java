@@ -5,15 +5,25 @@ import java.util.Map;
 
 public class FieldsCompletenessAnalyser {
 	private Map<String, Object> fields = new HashMap<>();
+	
+	public FieldsCompletenessAnalyser(Object[][] fields) {
+		for(Object[] field : fields) {
+			String key = (String) field[0];
+			Object value = field[1];
+
+			if(value instanceof Object[][]) {
+				Object[][] nestedField = (Object[][]) value;
+				FieldsCompletenessAnalyser child = new FieldsCompletenessAnalyser(nestedField);
+				
+				this.createField(key, child);
+			}
+			
+			else this.createField(key, value);
+		}
+	}
 
 	public void createField(String key, Object value) {
 		fields.put(key, value);
-	}
-	
-	public void printFields() {
-		for (Map.Entry<String, Object> pair : fields.entrySet()) {
-		    System.out.println(String.format("Key: %s, Value is : %s", pair.getKey(), pair.getValue())); 
-		}
 	}
 	
 	public int analyse() {
