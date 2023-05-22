@@ -11,16 +11,16 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import app.orinclusivo.FieldsCompletenessAnalyser;
+import app.FieldsCompletenessAnalyser;
 
 @RunWith(Parameterized.class)
-public class CompletenessORInclusiveTest {
+public class ORInclusiveCompletenessTest {
 	
-	FieldsCompletenessAnalyser analyser;
+	app.FieldsCompletenessAnalyser analyser;
 	private Object[][] fields;
 	private boolean isComplete;
 	
-	public CompletenessORInclusiveTest(Object[][] fields, boolean isComplete) {
+	public ORInclusiveCompletenessTest(Object[][] fields, boolean isComplete) {
 		this.fields = fields;
 		this.isComplete = isComplete;
 	}
@@ -77,9 +77,7 @@ public class CompletenessORInclusiveTest {
 	
 	@Test
 	public void testeORInclusivo() {
-		assertEquals(analyser.isComplete(), isComplete);
+		assertEquals(analyser.isInclusiveComplete(), isComplete);
 	}
 	
-	
-
 }

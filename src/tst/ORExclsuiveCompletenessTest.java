@@ -77,7 +77,7 @@ public class ORExclsuiveCompletenessTest {
 
 	@Test
 	public void testeOrExclusivo() {
-		assertEquals(analyser.isComplete(), isComplete);
+		assertEquals(analyser.isExclusiveComplete(), isComplete);
 	}
 
 }
