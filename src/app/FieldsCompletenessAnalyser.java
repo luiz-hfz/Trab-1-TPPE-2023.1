@@ -58,4 +58,8 @@ public class FieldsCompletenessAnalyser {
 
 		return false;
 	}
+
+	public double calculateCompleteness() {
+		return 100.0;
+	}
 }
