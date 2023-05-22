@@ -33,34 +33,26 @@ public class ORInclusiveCompletenessTest {
 	@Parameters
 	public static Collection<Object[]> getParameters(){
 		Object[][] parameters = new Object[][] {
-
-			// true, only atomic fields
 			{new Object[][] {
 				{"Nome", ""},
 				{"Idade", ""},
 				{"Emprego", ""},
 			}, false},
-
-			// false, only nested fields
 			{new Object[][] {
 				{"Nome", "João"},
 				{"Idade", "21"},
 				{"Emprego", ""},
 			}, true},
-
-			// true, with nested fields
 			{new Object[][] {
 				{"Nome", ""},
-				{"Idade", ""},
+				{"Idade", "21"},
 				{"Emprego", ""},
 				{"Endereço", new Object[][] {
 					{"Rua", ""},
-					{"Cidade", ""},
+					{"Cidade", "Brasilia"},
 					{"CEP", "71900100"}
 				}}
 			}, true},
-
-			// false, with nested fields
 			{new Object[][] {
 				{"Nome", ""},
 				{"Idade", ""},
