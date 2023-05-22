@@ -33,4 +33,22 @@ public class CompletenessCalculationTest {
         assertEquals(50, result, 0.01);
     }
 
+    @Test
+	public void testCalculateCompletenessForNestedFields() {
+		Object[][] fields = {
+				{"Nome", "João"},
+				{"Idade", ""},
+				{"Emprego", ""},
+				{"Endereço", new Object[][] {
+					{"Rua", ""},
+					{"Cidade", "Brasilia"},
+					{"CEP", ""}
+				}}
+			};
+
+		FieldsCompletenessAnalyser person = new FieldsCompletenessAnalyser(fields);
+        double result = person.calculateCompleteness();
+	    assertEquals(33.33, result, 0.01);
+	}
+
 }

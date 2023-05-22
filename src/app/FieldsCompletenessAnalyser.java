@@ -60,15 +60,15 @@ public class FieldsCompletenessAnalyser {
 	}
 	
 	public double calculateCompleteness() {
-		double result = 0;
+        double result = 0;
         int numOfFields = fields.size();
 
         for (Map.Entry<String, Object> pair : fields.entrySet()) {
             Object value = pair.getValue();
 
             if (value instanceof FieldsCompletenessAnalyser) {
-            	if (((FieldsCompletenessAnalyser) value).isExclusiveComplete())
-                    result += ((double) 1 / numOfFields) * 100;
+                FieldsCompletenessAnalyser child = (FieldsCompletenessAnalyser) value;
+                result += (child.calculateCompleteness() * ((double) 1 / numOfFields));
             } else {
                 if (!((String) value).isEmpty())
                     result += ((double) 1 / numOfFields) * 100;
@@ -76,5 +76,5 @@ public class FieldsCompletenessAnalyser {
         }
 
         return result;
-	}
+    }
 }
