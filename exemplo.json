@@ -1,0 +1,10 @@
+{
+    "Nome": "Joao",
+    "Idade": "21",
+    "Emprego": "",
+    "Endereço": {
+        "Rua": "",
+        "Cidade": "Brasilia",
+        "CEP": ""
+    }
+}
