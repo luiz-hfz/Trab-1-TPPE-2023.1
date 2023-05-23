@@ -13,10 +13,10 @@ public class ReadJSON {
             Object obj = parser.parse(reader);
             JSONObject jsonObject = (JSONObject) obj;
             
-            FieldsCompletenessAnalyser array = jsonObjectToArray(jsonObject);
-            
+            FieldsCompletenessAnalyser array = jsonObjectToArray(jsonObject);  
 
             return array;
+            
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
