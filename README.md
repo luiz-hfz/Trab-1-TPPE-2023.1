@@ -11,4 +11,4 @@ Repositório destinado a realização do trabalho de Técnicas de Programação 
 | Elias Yousef Santana Ali | 190027088 |
 | João Victor Teixeira Batista | 19/0109963 |
 | Luiz Henrique Fernandes Zamprogno | 19/0033681 |
-| Vitor Eduardo Kuhl Rodrigues | 190/118288 |
+| Vitor Eduardo Kuhl Rodrigues | 19/0118288 |
