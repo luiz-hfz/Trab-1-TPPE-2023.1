@@ -8,7 +8,7 @@ Repositório destinado a realização do trabalho de Técnicas de Programação 
 |---|---|
 | Arthur de Melo Garcia | 19/0024950 |
 | Artur de Sousa Vieira | 19/0010606 |
-| Elias Yousef Santana Ali | 190027088 |
+| Elias Yousef Santana Ali | 19/0027088 |
 | João Victor Teixeira Batista | 19/0109963 |
 | Luiz Henrique Fernandes Zamprogno | 19/0033681 |
 | Vitor Eduardo Kuhl Rodrigues | 19/0118288 |
